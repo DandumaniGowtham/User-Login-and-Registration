@@ -1,0 +1,95 @@
+/* Global Styles */
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background: linear-gradient(135deg, #74ebd5, #9face6);
+  text-align: center;
+  padding: 50px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style ONLY the h1 inside header */
+header h1 {
+  margin-bottom: 5px;
+  font-size: 36px;
+  font-weight: bold;
+  color: #2575fc; 
+  letter-spacing: 1px; 
+
+}
+
+/* My App and Login/Register links container */
+.app-block {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.app-links a {
+  color: #2575fc;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0 5px;
+}
+
+/* Container Card */
+.container {
+  margin: 20px 0;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 25px;
+  width: 320px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(8px); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Inputs & Buttons */
+input, button {
+  width: 90%;
+  margin: 12px 0;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+/* Input Focus */
+input:focus {
+  border-color: #6a11cb;
+  box-shadow: 0 0 8px rgba(106, 17, 203, 0.4);
+}
+
+/* Premium Button */
+button {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(106, 17, 203, 0.4);
+}
+
+
+.copyright {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+}
