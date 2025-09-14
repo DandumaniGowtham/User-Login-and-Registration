@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register</title>
+  <link rel="stylesheet" href="/ui.css">
+</head>
+<body>
+  <header>
+    <h1>My App</h1>
+    <nav>
+      <a href="/login">Login</a> |
+      <a href="/register">Register</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>Register</h2>
+    <% if (typeof error !== 'undefined' && error) { %>
+      <p class="error"><%= error %></p>
+    <% } %>
+
+    <% if (typeof otpSent !== 'undefined' && otpSent) { %>
+      <p>An OTP has been sent to <%= Email %>.</p>
+      <form action="/register" method="POST">
+        <input type="hidden" name="Username" value="<%= Username %>">
+        <input type="hidden" name="Email" value="<%= Email %>">
+        <input type="hidden" name="Password" value="<%= Password %>">
+        <input type="hidden" name="otpStage" value="verify">
+        <input type="text" name="otp" placeholder="Enter OTP" required>
+        <button type="submit">Verify OTP</button>
+      </form>
+    <% } else { %>
+      <form action="/register" method="POST">
+        <input type="text" name="Username" placeholder="Username" required>
+        <input type="email" name="Email" placeholder="Email" required>
+        <input type="password" name="Password" placeholder="Password" required>
+        <input type="hidden" name="otpStage" value="send">
+        <button type="submit">Send OTP</button>
+      </form>
+    <% } %>
+
+    <a href="/login">Already have an account? Login</a>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 My App. All rights reserved.</p>
+  </footer>
+</body>
+</html>
